@@ -139,6 +139,10 @@ function scoped() {
 function hostOf(url) {
   try { return new URL(url).hostname.replace(/^www\./, ""); } catch { return ""; }
 }
+// href 는 http(s)만 허용 — javascript:/data: 스킴이 클릭 가능한 링크가 되는 것을 차단
+function safeHttpUrl(url) {
+  return /^https?:\/\//i.test(url || "") ? url : "";
+}
 function countBy(arr, keyFn) {
   const m = new Map();
   for (const x of arr) {
@@ -461,10 +465,13 @@ function renderHighlights(container, items) {
     meta.appendChild(h("span", "hl-dim", `${it.briefDate} · ${it.competitor || "-"}${it.keyword ? " · " + it.keyword : ""}`));
     row.appendChild(meta);
     row.appendChild(h("p", "hl-text", it.title || it.point || ""));
-    if (it.source) {
-      const a = h("a", "hl-src", hostOf(it.source) || it.source);
-      a.href = it.source; a.target = "_blank"; a.rel = "noopener";
+    const safeSrc = safeHttpUrl(it.source);
+    if (safeSrc) {
+      const a = h("a", "hl-src", hostOf(safeSrc) || safeSrc);
+      a.href = safeSrc; a.target = "_blank"; a.rel = "noopener";
       row.appendChild(a);
+    } else if (it.source) {
+      row.appendChild(h("span", "hl-src", hostOf(it.source) || it.source)); // 비-http(s) 출처는 링크화하지 않음
     }
     list.appendChild(row);
   }
