@@ -36,6 +36,7 @@ function renderCompetitorFilters() {
 }
 
 // 정적 카드의 표시/숨김만 토글 (마크업은 배포 시 생성됨)
+// 매거진 2단 그리드의 세로 분할선(col-right)은 '보이는' 카드 순서 기준으로 다시 배정한다
 function renderCards() {
   let visible = 0;
   el.cards.querySelectorAll(".card").forEach((card) => {
@@ -45,7 +46,10 @@ function renderCards() {
     const show = (activeFilter === "all" || imp === activeFilter) &&
       (activeCompetitor === "all" || comps.includes(activeCompetitor));
     card.hidden = !show;
-    if (show) visible++;
+    if (show) {
+      card.classList.toggle("col-right", visible % 2 === 1);
+      visible++;
+    }
   });
   el.empty.hidden = visible > 0;
 }
