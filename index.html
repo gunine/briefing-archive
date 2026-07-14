@@ -27,7 +27,23 @@
     </div>
     <div class="filters" id="competitor-filters"></div>
 
-    <section id="cards" class="cards" aria-live="polite"></section>
+    <section id="cards" class="cards" aria-live="polite">
+    <a class="card" href="briefings/2026-07-13.html"
+       data-importance="high" data-competitors="[&quot;Acme&quot;,&quot;Globex&quot;]">
+      <div class="card-top"><span class="card-date">2026-07-13</span><span class="badge high">상</span></div>
+      <h2 class="card-title">Acme 엔터프라이즈 요금 15% 인하</h2>
+      <p class="card-summary">Acme가 엔터프라이즈 요금을 15% 인하하며 가격 경쟁을 촉발. Globex는 물류 스타트업 인수설로 대응 움직임.</p>
+      <p class="card-stats">항목 3 · 상 1 · 중 1 · 하 1 · 경쟁사 2</p>
+      <div class="card-chips"><span class="chip">Acme</span><span class="chip">Globex</span></div>
+    </a>
+    <a class="card" href="briefings/2026-07-12.html"
+       data-importance="medium" data-competitors="[&quot;Globex&quot;]">
+      <div class="card-top"><span class="card-date">2026-07-12</span><span class="badge medium">중</span></div>
+      <h2 class="card-title">Globex 시니어 엔지니어 대규모 채용</h2>
+      <p class="card-summary">Globex가 AI 플랫폼 팀 확장을 위해 시니어 채용 공고를 다수 게시. 신제품 준비 신호로 해석됨.</p>
+      <p class="card-stats">항목 2 · 중 2 · 경쟁사 1</p>
+      <div class="card-chips"><span class="chip">Globex</span></div>
+    </a></section>
     <p id="empty" class="empty" hidden>표시할 브리핑이 없습니다.</p>
 
     <section id="dashboard" hidden aria-label="브리핑 분석 대시보드"></section>
@@ -35,19 +51,9 @@
 
   <div id="viz-tooltip" class="viz-tooltip" hidden></div>
 
-  <!-- 상세 모달 -->
-  <div id="modal" class="modal" hidden>
-    <div class="modal-backdrop" data-close></div>
-    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <button class="modal-close" data-close aria-label="닫기">×</button>
-      <div id="modal-body"></div>
-    </div>
-  </div>
+  <footer class="site-footer">정적 아카이브 (GitHub Pages)</footer>
 
-  <footer class="site-footer">
-    정적 아카이브 (GitHub Pages)
-  </footer>
-
+  <script>window.__INDEX = [{"id":"2026-07-13","date":"2026-07-13","title":"Acme 엔터프라이즈 요금 15% 인하","summary":"Acme가 엔터프라이즈 요금을 15% 인하하며 가격 경쟁을 촉발. Globex는 물류 스타트업 인수설로 대응 움직임.","importance":"high","competitors":["Acme","Globex"],"stats":{"items":3,"high":1,"medium":1,"low":1,"competitors":2,"sources":1}},{"id":"2026-07-12","date":"2026-07-12","title":"Globex 시니어 엔지니어 대규모 채용","summary":"Globex가 AI 플랫폼 팀 확장을 위해 시니어 채용 공고를 다수 게시. 신제품 준비 신호로 해석됨.","importance":"medium","competitors":["Globex"],"stats":{"items":2,"high":0,"medium":2,"low":0,"competitors":1,"sources":1}}];</script>
   <script src="app.js"></script>
   <script src="dashboard.js"></script>
 </body>
