@@ -4,8 +4,15 @@
   "title": "Acme 엔터프라이즈 요금 15% 인하",
   "summary": "Acme가 엔터프라이즈 요금을 15% 인하하며 가격 경쟁을 촉발. Globex는 물류 스타트업 인수설로 대응 움직임.",
   "importance": "high",
-  "competitors": ["Acme", "Globex"],
-  "keywords": ["가격 정책", "인수합병", "신규 채용"],
+  "competitors": [
+    "Acme",
+    "Globex"
+  ],
+  "keywords": [
+    "가격 정책",
+    "인수합병",
+    "신규 채용"
+  ],
   "items": [
     {
       "competitor": "Acme",
