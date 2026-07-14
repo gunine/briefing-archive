@@ -1,5 +1,17 @@
 [
   {
+    "id": "2026-07-14",
+    "date": "2026-07-14",
+    "title": "AI 가격 경쟁 격화 — 모델 단가 인하와 Anthropic 인도 현지 가격",
+    "summary": "OpenAI·Meta·Musk가 모델 단가를 낮추며 AI 가격 경쟁이 본격화됐다. Anthropic은 미국 다음 최대 시장인 인도에 Claude 현지 가격을 도입했고, 신규 모델 해석성 연구와 규제 인용 이슈도 이어졌다.",
+    "importance": "high",
+    "competitors": [
+      "OpenAI",
+      "Anthropic",
+      "Google"
+    ]
+  },
+  {
     "id": "2026-07-13",
     "date": "2026-07-13",
     "title": "Acme 엔터프라이즈 요금 15% 인하",

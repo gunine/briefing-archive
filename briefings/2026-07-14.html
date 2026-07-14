@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026-07-14 — AI 가격 경쟁 격화 — 모델 단가 인하와 Anthropic 인도 현지 가격</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<style>
+:root{--bg:#ffffff;--bg-alt:#f7f8fa;--line:#e3e6eb;--line-strong:#c7ceda;--ink:#1a2233;--ink-2:#3d4657;--muted:#5a6472;--faint:#8792a2;--navy:#1f3864;--blue:#2e75b6;--red:#c00000;--high:#c00000;--medium:#2e75b6;--low:#8792a2}
+*{box-sizing:border-box}[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);line-height:1.65;font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--blue)}
+.top-nav{max-width:920px;margin:0 auto;padding:1.3rem 3rem;border-bottom:1px solid var(--line)}
+.top-nav a{text-decoration:none;color:var(--muted);font-size:.85rem;font-weight:700;letter-spacing:.04em}
+.top-nav a:hover{color:var(--navy)}
+.container{max-width:920px;margin:0 auto;padding:3.5rem 3rem 3rem}
+.kicker{display:flex;gap:.8rem;align-items:baseline;font-size:.75rem;font-weight:700;letter-spacing:.12em;color:var(--faint);font-variant-numeric:tabular-nums}
+.kicker .k-imp{font-weight:800}
+.kicker .k-imp.high{color:var(--red)}.kicker .k-imp.medium{color:var(--blue)}.kicker .k-imp.low{color:var(--low)}
+h1{margin:1rem 0 1.1rem;font-size:2.9rem;font-weight:850;letter-spacing:-.025em;line-height:1.15;color:var(--navy);overflow-wrap:anywhere}
+.b-summary{margin:0;color:var(--ink-2);font-size:1.08rem;line-height:1.7;max-width:62ch;overflow-wrap:anywhere}
+.tags{display:flex;flex-wrap:wrap;gap:.45rem;margin:1.4rem 0 0}
+.tag{font-size:.74rem;font-weight:600;letter-spacing:.03em;color:var(--muted);border:1px solid var(--line);padding:.1rem .55rem;overflow-wrap:anywhere}
+.badge{display:inline-block;font-size:.7rem;font-weight:800;padding:.08rem .4rem;white-space:nowrap;border:1px solid currentColor;line-height:1.5}
+.badge.high{color:var(--high)}.badge.medium{color:var(--medium)}.badge.low{color:var(--low)}
+.kpi-row{display:flex;flex-wrap:wrap;gap:2.8rem;border-top:1px solid var(--ink);border-bottom:1px solid var(--line);padding:1.5rem 0;margin:3rem 0}
+.kpi b{display:block;font-size:2rem;font-weight:850;color:var(--navy);line-height:1.1;font-variant-numeric:tabular-nums}
+.kpi span{color:var(--faint);font-size:.7rem;font-weight:700;letter-spacing:.12em}
+.panel{border-top:1px solid var(--ink);padding:1.8rem 0 0;margin:3.5rem 0 0}
+.panel h2{margin:0 0 1.1rem;font-size:1.2rem;font-weight:850;letter-spacing:-.01em;color:var(--navy)}
+.viz-legend{display:flex;gap:1rem;margin:0 0 .8rem}
+.lg-item{display:inline-flex;align-items:center;gap:.35rem;color:var(--muted);font-size:.78rem}
+.lg-swatch{width:12px;height:12px;border-radius:2px;display:inline-block}
+.viz-svg{width:100%;height:auto;display:block}
+.viz-cat{fill:var(--ink);font-size:12px}.viz-val{fill:var(--navy);font-size:12px;font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th,td{border:1px solid var(--line);padding:.5rem .7rem;text-align:center}
+th{background:var(--bg-alt);color:var(--navy);font-weight:700}
+td.name{text-align:left;font-weight:600}
+td.num{font-variant-numeric:tabular-nums}
+.grp{border-top:1px solid var(--ink);padding:1.8rem 0 0;margin:3.5rem 0 0}
+.grp h3{display:flex;align-items:baseline;gap:.6rem;margin:0 0 .4rem;font-size:1.45rem;font-weight:850;letter-spacing:-.015em;color:var(--navy)}
+.grp-count{font-size:.72rem;font-weight:700;color:var(--faint);letter-spacing:.1em}
+.item{border-top:1px solid var(--line);border-left:2px solid var(--line);padding:1.5rem .1rem 1.5rem 1.3rem;margin-top:1rem}
+.item:first-of-type{border-top:none}
+.item.high{border-left-color:var(--high)}.item.medium{border-left-color:var(--medium)}.item.low{border-left-color:var(--low)}
+.item-title{margin:0 0 .45rem;font-size:1.22rem;font-weight:800;line-height:1.4;letter-spacing:-.012em;overflow-wrap:anywhere}
+.item-title a{color:var(--navy);text-decoration:none}
+.item-title a:hover{color:var(--blue);text-decoration:underline}
+.item-meta{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;font-size:.8rem;color:var(--muted)}
+.item-meta .src{color:var(--blue);font-weight:700;text-decoration:none;letter-spacing:.02em}
+.item-meta .src:hover{text-decoration:underline}
+.item-meta time{font-variant-numeric:tabular-nums;color:var(--ink-2)}
+.item-point{margin:.55rem 0 0;color:var(--muted);font-size:.9rem;max-width:62ch;overflow-wrap:anywhere}
+footer{max-width:920px;margin:4rem auto 0;color:var(--faint);font-size:.78rem;padding:1.5rem 3rem 3.5rem;border-top:1px solid var(--line)}
+footer a{color:var(--blue)}
+@media (max-width:720px){.container{padding:2.5rem 1.4rem}h1{font-size:2.1rem}.top-nav,footer{padding-left:1.4rem;padding-right:1.4rem}.kpi-row{gap:1.8rem}}
+</style>
+</head>
+<body>
+<nav class="top-nav"><a href="../index.html">← 아카이브</a></nav>
+<div class="container">
+  <div class="kicker"><span>2026-07-14</span><span class="k-imp high">중요도 상</span></div>
+  <h1>AI 가격 경쟁 격화 — 모델 단가 인하와 Anthropic 인도 현지 가격</h1>
+  <p class="b-summary">OpenAI·Meta·Musk가 모델 단가를 낮추며 AI 가격 경쟁이 본격화됐다. Anthropic은 미국 다음 최대 시장인 인도에 Claude 현지 가격을 도입했고, 신규 모델 해석성 연구와 규제 인용 이슈도 이어졌다.</p>
+  <div class="tags"><span class="tag">OpenAI</span><span class="tag">Anthropic</span><span class="tag">Google</span><span class="tag">신규 모델</span><span class="tag">펀딩</span><span class="tag">가격 정책</span></div>
+  <div class="kpi-row"><div class="kpi"><b>9</b><span>항목</span></div><div class="kpi"><b>2</b><span>상</span></div><div class="kpi"><b>3</b><span>중</span></div><div class="kpi"><b>4</b><span>하</span></div><div class="kpi"><b>3</b><span>경쟁사</span></div><div class="kpi"><b>8</b><span>출처</span></div></div>
+  <section class="panel"><h2>경쟁사별 항목</h2><div class="viz-legend"><span class="lg-item"><span class="lg-swatch" style="background:#c00000"></span>상</span><span class="lg-item"><span class="lg-swatch" style="background:#2e75b6"></span>중</span><span class="lg-item"><span class="lg-swatch" style="background:#8792a2"></span>하</span></div><svg class="viz-svg" viewBox="0 0 640 114" role="img" aria-label="경쟁사별 항목 수"><text class="viz-cat" x="100" y="27" text-anchor="end">Anthropic</text><rect x="110" y="14" width="92.80000000000001" height="18" fill="#c00000"/><rect x="204.8" y="14" width="187.60000000000002" height="18" fill="#2e75b6"/><path d="M394.40000000000003,14 H580 Q584,14 584,18 V28 Q584,32 580,32 H394.40000000000003 Z" fill="#8792a2"/><text class="viz-val" x="592" y="27">5</text><text class="viz-cat" x="100" y="61" text-anchor="end">OpenAI</text><rect x="110" y="48" width="92.80000000000001" height="18" fill="#c00000"/><path d="M204.8,48 H295.6 Q299.6,48 299.6,52 V62 Q299.6,66 295.6,66 H204.8 Z" fill="#2e75b6"/><text class="viz-val" x="307.6" y="61">2</text><text class="viz-cat" x="100" y="95" text-anchor="end">Google</text><path d="M110,82 H295.6 Q299.6,82 299.6,86 V96 Q299.6,100 295.6,100 H110 Z" fill="#8792a2"/><text class="viz-val" x="307.6" y="95">2</text></svg></section>
+  
+  <section class="panel"><h2>경쟁사 비교</h2>
+    <table><thead><tr><th>경쟁사</th><th>계</th><th>상</th><th>중</th><th>하</th></tr></thead><tbody>
+    <tr><td class="name">Anthropic</td><td class="num">5</td><td class="num">1</td><td class="num">2</td><td class="num">2</td></tr><tr><td class="name">OpenAI</td><td class="num">2</td><td class="num">1</td><td class="num">1</td><td class="num">0</td></tr><tr><td class="name">Google</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">2</td></tr>
+    </tbody></table></section>
+  <section class="grp"><h3>Anthropic <span class="grp-count">5건</span></h3>
+      
+  <article class="item high">
+    <h4 class="item-title"><a href="https://techcrunch.com/2026/07/13/anthropic-starts-localizing-claude-pricing-for-india-its-biggest-market-after-the-us/" target="_blank" rel="noopener">Anthropic starts localizing Claude pricing for India, its biggest market after the US</a></h4>
+    <div class="item-meta"><a class="src" href="https://techcrunch.com/2026/07/13/anthropic-starts-localizing-claude-pricing-for-india-its-biggest-market-after-the-us/" target="_blank" rel="noopener">techcrunch.com</a><span aria-hidden="true">·</span><time>15 hours ago</time><span aria-hidden="true">·</span><span>가격 정책</span><span aria-hidden="true">·</span><span class="badge high">상</span></div>
+    <p class="item-point">Anthropic has started localizing Claude&#39;s pricing in India, its biggest market outside the U.S., as global AI companies increasingly tailor their offerings...</p>
+  </article>
+  <article class="item medium">
+    <h4 class="item-title"><a href="https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/" target="_blank" rel="noopener">What Anthropic’s latest AI discovery does—and doesn’t—show</a></h4>
+    <div class="item-meta"><a class="src" href="https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/" target="_blank" rel="noopener">technologyreview.com</a><span aria-hidden="true">·</span><time>12 hours ago</time><span aria-hidden="true">·</span><span>신규 모델</span><span aria-hidden="true">·</span><span class="badge medium">중</span></div>
+    <p class="item-point">The company says it has found a new window into how its models arrive at answers. We spoke with senior editor Will Douglas Heaven about it.</p>
+  </article>
+  <article class="item medium">
+    <h4 class="item-title"><a href="https://www.reuters.com/world/canada-regulator-cited-anthropics-claude-mythos-warning-banks-cyber-risks-email-2026-07-13/" target="_blank" rel="noopener">EXCLUSIVE Canada regulator cited Anthropic&#39;s Claude Mythos in warning to banks on cyber risks, email shows</a></h4>
+    <div class="item-meta"><a class="src" href="https://www.reuters.com/world/canada-regulator-cited-anthropics-claude-mythos-warning-banks-cyber-risks-email-2026-07-13/" target="_blank" rel="noopener">reuters.com</a><span aria-hidden="true">·</span><time>12 hours ago</time><span aria-hidden="true">·</span><span>신규 모델</span><span aria-hidden="true">·</span><span class="badge medium">중</span></div>
+    <p class="item-point">Canada&#39;s federal banking regulator warned the ​country&#39;s largest financial institutions about the risks of Anthropic&#39;s Claude Mythos and other advanced AI...</p>
+  </article>
+  <article class="item low">
+    <h4 class="item-title"><a href="https://gizmodo.com/anthropic-says-claudes-values-are-different-depending-on-which-language-youre-using-2000785113" target="_blank" rel="noopener">Anthropic Says Claude’s Values Are Different Depending on Which Language You’re Using</a></h4>
+    <div class="item-meta"><a class="src" href="https://gizmodo.com/anthropic-says-claudes-values-are-different-depending-on-which-language-youre-using-2000785113" target="_blank" rel="noopener">gizmodo.com</a><span aria-hidden="true">·</span><time>4 hours ago</time><span aria-hidden="true">·</span><span>신규 모델</span><span aria-hidden="true">·</span><span class="badge low">하</span></div>
+    <p class="item-point">Anthropic researchers say they “aren&#39;t yet sure how much of this variation is desirable.”</p>
+  </article>
+  <article class="item low">
+    <h4 class="item-title"><a href="https://www.forbes.com/sites/tylerroush/2026/07/13/ai-model-wars-anthropic-extends-fable-access-again-after-openais-sol-release/" target="_blank" rel="noopener">Here’s Why Anthropic Extended Access To Claude Fable 5 Extended—Again</a></h4>
+    <div class="item-meta"><a class="src" href="https://www.forbes.com/sites/tylerroush/2026/07/13/ai-model-wars-anthropic-extends-fable-access-again-after-openais-sol-release/" target="_blank" rel="noopener">forbes.com</a><span aria-hidden="true">·</span><time>16 hours ago</time><span aria-hidden="true">·</span><span>신규 모델</span><span aria-hidden="true">·</span><span class="badge low">하</span></div>
+    <p class="item-point">Anthropic extended access for Claude Fable 5 for subscribers for the second time in a week, an apparent response to the launch of OpenAI&#39;s latest ChatGPT...</p>
+  </article>
+    </section><section class="grp"><h3>OpenAI <span class="grp-count">2건</span></h3>
+      
+  <article class="item high">
+    <h4 class="item-title"><a href="https://www.latimes.com/business/story/2026-07-13/ai-price-war-heats-up-as-openai-meta-musk-slash-model-costs" target="_blank" rel="noopener">AI price war heats up as OpenAI, Meta and Musk slash model costs</a></h4>
+    <div class="item-meta"><a class="src" href="https://www.latimes.com/business/story/2026-07-13/ai-price-war-heats-up-as-openai-meta-musk-slash-model-costs" target="_blank" rel="noopener">latimes.com</a><span aria-hidden="true">·</span><time>13 hours ago</time><span aria-hidden="true">·</span><span>가격 정책</span><span aria-hidden="true">·</span><span class="badge high">상</span></div>
+    <p class="item-point">AI price war heats up as OpenAI, Meta and Musk slash model costs.</p>
+  </article>
+  <article class="item medium">
+    <h4 class="item-title"><a href="https://fortune.com/2026/07/13/elon-musk-sam-altman-feud-scam-accusations-spacex-openai-ipos-grok-gpt-apple-lawsuit/" target="_blank" rel="noopener">Elon Musk and Sam Altman accuse each other of scamming investors as each pitches their AI vision</a></h4>
+    <div class="item-meta"><a class="src" href="https://fortune.com/2026/07/13/elon-musk-sam-altman-feud-scam-accusations-spacex-openai-ipos-grok-gpt-apple-lawsuit/" target="_blank" rel="noopener">fortune.com</a><span aria-hidden="true">·</span><time>11 hours ago</time><span aria-hidden="true">·</span><span>펀딩</span><span aria-hidden="true">·</span><span class="badge medium">중</span></div>
+    <p class="item-point">A social media fight erupted after their companies launched competing AI models one day apart.</p>
+  </article>
+    </section><section class="grp"><h3>Google <span class="grp-count">2건</span></h3>
+      
+  <article class="item low">
+    <h4 class="item-title"><a href="https://www.cnet.com/deals/google-pixel-10-series-deal-2026-07-13/" target="_blank" rel="noopener">With Google&#39;s Pixel 11 Looming, Amazon Slashes Pixel 10 Prices by Up to $300</a></h4>
+    <div class="item-meta"><a class="src" href="https://www.cnet.com/deals/google-pixel-10-series-deal-2026-07-13/" target="_blank" rel="noopener">cnet.com</a><span aria-hidden="true">·</span><time>13 hours ago</time><span aria-hidden="true">·</span><span>가격 정책</span><span aria-hidden="true">·</span><span class="badge low">하</span></div>
+    <p class="item-point">Multiple Google Pixel 10 devices are down, starting at just $599 for the base model.</p>
+  </article>
+  <article class="item low">
+    <h4 class="item-title"><a href="https://gizmodo.com/google-pixel-watch-4-lte-is-now-cheaper-than-the-wi-fi-model-after-returning-to-black-friday-pricing-2000784486" target="_blank" rel="noopener">Google Pixel Watch 4 LTE Is Now Cheaper Than the WiFi Model After Returning to Black Friday Pricing on Amazon</a></h4>
+    <div class="item-meta"><a class="src" href="https://gizmodo.com/google-pixel-watch-4-lte-is-now-cheaper-than-the-wi-fi-model-after-returning-to-black-friday-pricing-2000784486" target="_blank" rel="noopener">gizmodo.com</a><span aria-hidden="true">·</span><time>17 hours ago</time><span aria-hidden="true">·</span><span>가격 정책</span><span aria-hidden="true">·</span><span class="badge low">하</span></div>
+    <p class="item-point">The watch comes with all the essential Google apps like Google Maps and Gmail pre-installed.</p>
+  </article>
+    </section>
+</div>
+<footer>생성 2026-07-14T06:26:02.823Z · <a href="https://gunine.github.io/briefing-archive/">공개 아카이브</a></footer>
+<script type="application/json" id="briefing-data">{"id":"2026-07-14","date":"2026-07-14","title":"AI 가격 경쟁 격화 — 모델 단가 인하와 Anthropic 인도 현지 가격","summary":"OpenAI·Meta·Musk가 모델 단가를 낮추며 AI 가격 경쟁이 본격화됐다. Anthropic은 미국 다음 최대 시장인 인도에 Claude 현지 가격을 도입했고, 신규 모델 해석성 연구와 규제 인용 이슈도 이어졌다.","importance":"high","competitors":["OpenAI","Anthropic","Google"],"keywords":["신규 모델","펀딩","가격 정책"],"items":[{"competitor":"OpenAI","keyword":"가격 정책","title":"AI price war heats up as OpenAI, Meta and Musk slash model costs","point":"AI price war heats up as OpenAI, Meta and Musk slash model costs.","source":"https://www.latimes.com/business/story/2026-07-13/ai-price-war-heats-up-as-openai-meta-musk-slash-model-costs","date":"13 hours ago","importance":"high"},{"competitor":"OpenAI","keyword":"펀딩","title":"Elon Musk and Sam Altman accuse each other of scamming investors as each pitches their AI vision","point":"A social media fight erupted after their companies launched competing AI models one day apart.","source":"https://fortune.com/2026/07/13/elon-musk-sam-altman-feud-scam-accusations-spacex-openai-ipos-grok-gpt-apple-lawsuit/","date":"11 hours ago","importance":"medium"},{"competitor":"Anthropic","keyword":"가격 정책","title":"Anthropic starts localizing Claude pricing for India, its biggest market after the US","point":"Anthropic has started localizing Claude's pricing in India, its biggest market outside the U.S., as global AI companies increasingly tailor their offerings...","source":"https://techcrunch.com/2026/07/13/anthropic-starts-localizing-claude-pricing-for-india-its-biggest-market-after-the-us/","date":"15 hours ago","importance":"high"},{"competitor":"Anthropic","keyword":"신규 모델","title":"What Anthropic’s latest AI discovery does—and doesn’t—show","point":"The company says it has found a new window into how its models arrive at answers. We spoke with senior editor Will Douglas Heaven about it.","source":"https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/","date":"12 hours ago","importance":"medium"},{"competitor":"Anthropic","keyword":"신규 모델","title":"EXCLUSIVE Canada regulator cited Anthropic's Claude Mythos in warning to banks on cyber risks, email shows","point":"Canada's federal banking regulator warned the ​country's largest financial institutions about the risks of Anthropic's Claude Mythos and other advanced AI...","source":"https://www.reuters.com/world/canada-regulator-cited-anthropics-claude-mythos-warning-banks-cyber-risks-email-2026-07-13/","date":"12 hours ago","importance":"medium"},{"competitor":"Anthropic","keyword":"신규 모델","title":"Anthropic Says Claude’s Values Are Different Depending on Which Language You’re Using","point":"Anthropic researchers say they “aren't yet sure how much of this variation is desirable.”","source":"https://gizmodo.com/anthropic-says-claudes-values-are-different-depending-on-which-language-youre-using-2000785113","date":"4 hours ago","importance":"low"},{"competitor":"Anthropic","keyword":"신규 모델","title":"Here’s Why Anthropic Extended Access To Claude Fable 5 Extended—Again","point":"Anthropic extended access for Claude Fable 5 for subscribers for the second time in a week, an apparent response to the launch of OpenAI's latest ChatGPT...","source":"https://www.forbes.com/sites/tylerroush/2026/07/13/ai-model-wars-anthropic-extends-fable-access-again-after-openais-sol-release/","date":"16 hours ago","importance":"low"},{"competitor":"Google","keyword":"가격 정책","title":"With Google's Pixel 11 Looming, Amazon Slashes Pixel 10 Prices by Up to $300","point":"Multiple Google Pixel 10 devices are down, starting at just $599 for the base model.","source":"https://www.cnet.com/deals/google-pixel-10-series-deal-2026-07-13/","date":"13 hours ago","importance":"low"},{"competitor":"Google","keyword":"가격 정책","title":"Google Pixel Watch 4 LTE Is Now Cheaper Than the WiFi Model After Returning to Black Friday Pricing on Amazon","point":"The watch comes with all the essential Google apps like Google Maps and Gmail pre-installed.","source":"https://gizmodo.com/google-pixel-watch-4-lte-is-now-cheaper-than-the-wi-fi-model-after-returning-to-black-friday-pricing-2000784486","date":"17 hours ago","importance":"low"}],"createdAt":"2026-07-14T06:26:02.823Z"}</script>
+</body>
+</html>

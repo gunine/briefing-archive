@@ -1,0 +1,101 @@
+{
+  "id": "2026-07-14",
+  "date": "2026-07-14",
+  "title": "AI 가격 경쟁 격화 — 모델 단가 인하와 Anthropic 인도 현지 가격",
+  "summary": "OpenAI·Meta·Musk가 모델 단가를 낮추며 AI 가격 경쟁이 본격화됐다. Anthropic은 미국 다음 최대 시장인 인도에 Claude 현지 가격을 도입했고, 신규 모델 해석성 연구와 규제 인용 이슈도 이어졌다.",
+  "importance": "high",
+  "competitors": [
+    "OpenAI",
+    "Anthropic",
+    "Google"
+  ],
+  "keywords": [
+    "신규 모델",
+    "펀딩",
+    "가격 정책"
+  ],
+  "items": [
+    {
+      "competitor": "OpenAI",
+      "keyword": "가격 정책",
+      "title": "AI price war heats up as OpenAI, Meta and Musk slash model costs",
+      "point": "AI price war heats up as OpenAI, Meta and Musk slash model costs.",
+      "source": "https://www.latimes.com/business/story/2026-07-13/ai-price-war-heats-up-as-openai-meta-musk-slash-model-costs",
+      "date": "13 hours ago",
+      "importance": "high"
+    },
+    {
+      "competitor": "OpenAI",
+      "keyword": "펀딩",
+      "title": "Elon Musk and Sam Altman accuse each other of scamming investors as each pitches their AI vision",
+      "point": "A social media fight erupted after their companies launched competing AI models one day apart.",
+      "source": "https://fortune.com/2026/07/13/elon-musk-sam-altman-feud-scam-accusations-spacex-openai-ipos-grok-gpt-apple-lawsuit/",
+      "date": "11 hours ago",
+      "importance": "medium"
+    },
+    {
+      "competitor": "Anthropic",
+      "keyword": "가격 정책",
+      "title": "Anthropic starts localizing Claude pricing for India, its biggest market after the US",
+      "point": "Anthropic has started localizing Claude's pricing in India, its biggest market outside the U.S., as global AI companies increasingly tailor their offerings...",
+      "source": "https://techcrunch.com/2026/07/13/anthropic-starts-localizing-claude-pricing-for-india-its-biggest-market-after-the-us/",
+      "date": "15 hours ago",
+      "importance": "high"
+    },
+    {
+      "competitor": "Anthropic",
+      "keyword": "신규 모델",
+      "title": "What Anthropic’s latest AI discovery does—and doesn’t—show",
+      "point": "The company says it has found a new window into how its models arrive at answers. We spoke with senior editor Will Douglas Heaven about it.",
+      "source": "https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/",
+      "date": "12 hours ago",
+      "importance": "medium"
+    },
+    {
+      "competitor": "Anthropic",
+      "keyword": "신규 모델",
+      "title": "EXCLUSIVE Canada regulator cited Anthropic's Claude Mythos in warning to banks on cyber risks, email shows",
+      "point": "Canada's federal banking regulator warned the ​country's largest financial institutions about the risks of Anthropic's Claude Mythos and other advanced AI...",
+      "source": "https://www.reuters.com/world/canada-regulator-cited-anthropics-claude-mythos-warning-banks-cyber-risks-email-2026-07-13/",
+      "date": "12 hours ago",
+      "importance": "medium"
+    },
+    {
+      "competitor": "Anthropic",
+      "keyword": "신규 모델",
+      "title": "Anthropic Says Claude’s Values Are Different Depending on Which Language You’re Using",
+      "point": "Anthropic researchers say they “aren't yet sure how much of this variation is desirable.”",
+      "source": "https://gizmodo.com/anthropic-says-claudes-values-are-different-depending-on-which-language-youre-using-2000785113",
+      "date": "4 hours ago",
+      "importance": "low"
+    },
+    {
+      "competitor": "Anthropic",
+      "keyword": "신규 모델",
+      "title": "Here’s Why Anthropic Extended Access To Claude Fable 5 Extended—Again",
+      "point": "Anthropic extended access for Claude Fable 5 for subscribers for the second time in a week, an apparent response to the launch of OpenAI's latest ChatGPT...",
+      "source": "https://www.forbes.com/sites/tylerroush/2026/07/13/ai-model-wars-anthropic-extends-fable-access-again-after-openais-sol-release/",
+      "date": "16 hours ago",
+      "importance": "low"
+    },
+    {
+      "competitor": "Google",
+      "keyword": "가격 정책",
+      "title": "With Google's Pixel 11 Looming, Amazon Slashes Pixel 10 Prices by Up to $300",
+      "point": "Multiple Google Pixel 10 devices are down, starting at just $599 for the base model.",
+      "source": "https://www.cnet.com/deals/google-pixel-10-series-deal-2026-07-13/",
+      "date": "13 hours ago",
+      "importance": "low"
+    },
+    {
+      "competitor": "Google",
+      "keyword": "가격 정책",
+      "title": "Google Pixel Watch 4 LTE Is Now Cheaper Than the WiFi Model After Returning to Black Friday Pricing on Amazon",
+      "point": "The watch comes with all the essential Google apps like Google Maps and Gmail pre-installed.",
+      "source": "https://gizmodo.com/google-pixel-watch-4-lte-is-now-cheaper-than-the-wi-fi-model-after-returning-to-black-friday-pricing-2000784486",
+      "date": "17 hours ago",
+      "importance": "low"
+    }
+  ],
+  "createdAt": "2026-07-14T06:26:02.823Z"
+}
