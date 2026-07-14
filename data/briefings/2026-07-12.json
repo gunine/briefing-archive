@@ -1,0 +1,30 @@
+{
+  "id": "2026-07-12",
+  "date": "2026-07-12",
+  "title": "Globex 시니어 엔지니어 대규모 채용",
+  "summary": "Globex가 AI 플랫폼 팀 확장을 위해 시니어 채용 공고를 다수 게시. 신제품 준비 신호로 해석됨.",
+  "importance": "medium",
+  "competitors": ["Globex"],
+  "keywords": ["신규 채용", "제품 로드맵"],
+  "items": [
+    {
+      "competitor": "Globex",
+      "keyword": "신규 채용",
+      "title": "Globex AI 플랫폼 팀 시니어 채용",
+      "point": "AI 플랫폼 팀 시니어 엔지니어 8명 채용 공고 게시.",
+      "source": "https://example.com/globex-jobs",
+      "date": "2026-07-12",
+      "importance": "medium"
+    },
+    {
+      "competitor": "Globex",
+      "keyword": "제품 로드맵",
+      "title": "채용 JD 에 실시간 추론 서비스 언급",
+      "point": "채용 JD에 '실시간 추론 서비스' 언급 — 신제품 준비 신호.",
+      "source": "https://example.com/globex-jd",
+      "date": "2026-07-12",
+      "importance": "medium"
+    }
+  ],
+  "createdAt": "2026-07-12T08:05:00Z"
+}

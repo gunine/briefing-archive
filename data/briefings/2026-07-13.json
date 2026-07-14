@@ -1,0 +1,39 @@
+{
+  "id": "2026-07-13",
+  "date": "2026-07-13",
+  "title": "Acme 엔터프라이즈 요금 15% 인하",
+  "summary": "Acme가 엔터프라이즈 요금을 15% 인하하며 가격 경쟁을 촉발. Globex는 물류 스타트업 인수설로 대응 움직임.",
+  "importance": "high",
+  "competitors": ["Acme", "Globex"],
+  "keywords": ["가격 정책", "인수합병", "신규 채용"],
+  "items": [
+    {
+      "competitor": "Acme",
+      "keyword": "가격 정책",
+      "title": "Acme, 엔터프라이즈 요금 15% 인하 발표",
+      "point": "엔터프라이즈 요금 15% 인하 공식 발표. 연간 계약 고객에 즉시 적용.",
+      "source": "https://example.com/acme-pricing",
+      "date": "2026-07-13",
+      "importance": "high"
+    },
+    {
+      "competitor": "Globex",
+      "keyword": "인수합병",
+      "title": "Globex 물류 스타트업 인수설",
+      "point": "물류 스타트업 인수설 보도. 공급망 강화 목적으로 추정.",
+      "source": "https://example.com/globex-ma",
+      "date": "2026-07-13",
+      "importance": "medium"
+    },
+    {
+      "competitor": "Globex",
+      "keyword": "신규 채용",
+      "title": "Globex 영업 조직 채용",
+      "point": "영업 조직 소폭 확대 채용 공고.",
+      "source": "https://example.com/globex-hiring",
+      "date": "2026-07-12",
+      "importance": "low"
+    }
+  ],
+  "createdAt": "2026-07-13T08:10:00Z"
+}

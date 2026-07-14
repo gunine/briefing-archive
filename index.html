@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>경쟁사 동향 브리핑 아카이브</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>경쟁사 동향 브리핑</h1>
+    <p class="subtitle">매일 아침 챙겨본 경쟁사 동향 아카이브</p>
+  </header>
+
+  <main class="container">
+    <div class="view-toggle">
+      <button class="vt-btn is-active" id="view-cards" aria-pressed="true">카드</button>
+      <button class="vt-btn" id="view-dash" aria-pressed="false">대시보드</button>
+    </div>
+
+    <div class="filters" id="filters">
+      <span class="filter-label">중요도</span>
+      <button class="filter-btn is-active" data-filter="all">전체</button>
+      <button class="filter-btn" data-filter="high">상</button>
+      <button class="filter-btn" data-filter="medium">중</button>
+      <button class="filter-btn" data-filter="low">하</button>
+    </div>
+    <div class="filters" id="competitor-filters"></div>
+
+    <section id="cards" class="cards" aria-live="polite"></section>
+    <p id="empty" class="empty" hidden>표시할 브리핑이 없습니다.</p>
+
+    <section id="dashboard" hidden aria-label="브리핑 분석 대시보드"></section>
+  </main>
+
+  <div id="viz-tooltip" class="viz-tooltip" hidden></div>
+
+  <!-- 상세 모달 -->
+  <div id="modal" class="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" data-close aria-label="닫기">×</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    정적 아카이브 (GitHub Pages)
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
