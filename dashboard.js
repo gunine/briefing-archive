@@ -1,17 +1,17 @@
-// 대시보드 (정량·정성 분석) — 정적. app.js 뒤에 로드되어 allBriefings/activeCompetitor/escapeHtml/IMPORTANCE/rank 를 공유한다.
-// 색상은 검증 완료: 상 #ef4444 / 중 #c98500 / 하 #8b93a1 (다크 서피스 #191c24, L밴드·CVD ΔE20.5·콘트라스트 PASS,
+// 대시보드 (정량·정성 분석) — 정적. app.js 뒤에 로드되어 allBriefings/activeCompetitor/renderCards 를 공유한다.
+// 색상은 검증 완료(화이트 서피스): 상 #C00000 / 중 #2E75B6 / 하 #8792A2 (L밴드·CVD ΔE30.4·콘트라스트 PASS,
 // '하'의 무채색은 상태 스케일의 의도적 de-emphasis — 범례·2px 갭·툴팁·표 뷰가 완화 채널).
-// 단일 시리즈 블루 #3987e5 (4.68:1), 히트맵 램프는 단조 명도.
+// 단일 시리즈 네이비 #1F3864 (11.6:1), 히트맵 램프는 단조 명도(라이트: 진할수록 많음).
 
 const VIZ = {
-  high: "#ef4444",
-  medium: "#c98500",
-  low: "#8b93a1",
-  blue: "#3987e5",
-  ramp: ["#184f95", "#256abf", "#3987e5", "#6da7ec", "#9ec5f4"],
-  grid: "#2b303c",
-  muted: "#9aa1ad",
-  ink: "#e7e9ee",
+  high: "#c00000",
+  medium: "#2e75b6",
+  low: "#8792a2",
+  blue: "#1f3864", // 단일 시리즈(키워드/출처)는 브랜드 네이비
+  ramp: ["#d9e5f2", "#a9c6e3", "#6fa0d0", "#2e75b6", "#1f3864"],
+  grid: "#e3e6eb",
+  muted: "#5a6472",
+  ink: "#1a2233",
 };
 const IMP_ORDER = ["high", "medium", "low"];
 const IMP_LABEL = { high: "상", medium: "중", low: "하" };
@@ -382,11 +382,11 @@ function renderTopBar(container, title, entries, capNote) {
   container.appendChild(card);
 }
 
-// ── 차트 5: 경쟁사 × 키워드 히트맵 (순차 램프 — 다크에서 밝을수록 많음) ──
+// ── 차트 5: 경쟁사 × 키워드 히트맵 (순차 램프 — 라이트에서 진할수록 많음) ──
 function renderHeatmap(container, items) {
   const comps = countBy(items, (it) => it.competitor).slice(0, 6).map(([n]) => n);
   const kws = countBy(items, (it) => it.keyword).slice(0, 6).map(([n]) => n);
-  const parts = chartCard("경쟁사 × 키워드", "밝을수록 항목이 많음");
+  const parts = chartCard("경쟁사 × 키워드", "진할수록 항목이 많음");
   const { card, chartBody, tableBody } = parts;
   if (comps.length < 1 || kws.length < 1) { markEmpty(parts); container.appendChild(card); return; }
 
@@ -430,8 +430,8 @@ function renderHeatmap(container, items) {
       root.appendChild(cell);
       if (v > 0) {
         // 셀 안 라벨 — 배경 명도에 따라 잉크 선택
-        const light = VIZ.ramp.indexOf(step) >= 2; // #3987e5(idx2)는 흰 글자 3.64:1 미달 → 어두운 잉크
-        const t2 = svg("text", { x: PADL + j * CELL + CELL / 2, y: PADT + i * CELLH + CELLH / 2 + 4, "text-anchor": "middle", class: "viz-cell", fill: light ? "#0b0b0b" : "#ffffff" });
+        const whiteInk = VIZ.ramp.indexOf(step) >= 3; // 라이트 램프: 진한 스텝(#2e75b6 4.84:1↑)만 흰 잉크
+        const t2 = svg("text", { x: PADL + j * CELL + CELL / 2, y: PADT + i * CELLH + CELLH / 2 + 4, "text-anchor": "middle", class: "viz-cell", fill: whiteInk ? "#ffffff" : "#1a2233" });
         t2.textContent = String(v);
         root.appendChild(t2);
       }

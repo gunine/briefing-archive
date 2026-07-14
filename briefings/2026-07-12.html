@@ -3,51 +3,54 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>2026-07-12 — Globex 시니어 엔지니어 대규모 채용</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
 <style>
-:root{--bg:#0f1115;--surface:#191c24;--surface-2:#21252f;--border:#2b303c;--text:#e7e9ee;--text-dim:#9aa1ad;--accent:#5b8def;--high:#ef4444;--medium:#c98500;--low:#8b93a1}
+:root{--bg:#ffffff;--bg-alt:#f7f8fa;--line:#e3e6eb;--line-strong:#c7ceda;--ink:#1a2233;--ink-2:#3d4657;--muted:#5a6472;--faint:#8792a2;--navy:#1f3864;--blue:#2e75b6;--red:#c00000;--high:#c00000;--medium:#2e75b6;--low:#8792a2}
 *{box-sizing:border-box}[hidden]{display:none!important}
-body{margin:0;background:var(--bg);color:var(--text);line-height:1.55;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
-a{color:var(--accent)}
-.container{max-width:860px;margin:0 auto;padding:1.5rem}
-.badge{display:inline-block;font-size:.72rem;font-weight:700;padding:.12rem .5rem;border-radius:999px}
-.badge.high{color:#ef4444;background:#3a1a1c}.badge.medium{color:#f0a92e;background:#3a2c12}.badge.low{color:#8b93a1;background:#262b34}
-.tag{font-size:.78rem;color:var(--text-dim);background:var(--surface-2);border:1px solid var(--border);border-radius:6px;padding:.1rem .5rem}
-h1,.b-summary,.item-title,.item-point,.tag{overflow-wrap:anywhere}
-.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 0}
-
-.top-nav{padding:1rem 1.5rem;border-bottom:1px solid var(--border)}
-.top-nav a{text-decoration:none;color:var(--text-dim);font-size:.88rem}
-.top-nav a:hover{color:var(--text)}
-.b-date{color:var(--text-dim);font-size:.88rem}
-h1{margin:.25rem 0 .5rem;font-size:1.5rem}
-.b-summary{margin:0;color:var(--text)}
-.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:.75rem;margin:1.4rem 0}
-.kpi{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:.7rem .9rem}
-.kpi b{display:block;font-size:1.5rem;font-weight:600}
-.kpi span{color:var(--text-dim);font-size:.76rem}
-.panel{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1rem 1.1rem;margin-bottom:1rem}
-.panel h2{margin:0 0 .6rem;font-size:.95rem}
-.viz-legend{display:flex;gap:.9rem;margin:0 0 .5rem}
-.lg-item{display:inline-flex;align-items:center;gap:.35rem;color:var(--text-dim);font-size:.78rem}
-.lg-swatch{width:12px;height:12px;border-radius:3px;display:inline-block}
+body{margin:0;background:var(--bg);color:var(--ink);line-height:1.6;font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--blue)}
+.top-nav{max-width:900px;margin:0 auto;padding:1.1rem 2rem;border-bottom:1px solid var(--line)}
+.top-nav a{text-decoration:none;color:var(--muted);font-size:.88rem;font-weight:600}
+.top-nav a:hover{color:var(--navy)}
+.container{max-width:900px;margin:0 auto;padding:2.25rem 2rem 2rem}
+.b-date{color:var(--muted);font-size:.88rem;font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:.5rem}
+h1{margin:.45rem 0 .7rem;font-size:1.9rem;font-weight:800;letter-spacing:-.01em;line-height:1.3;color:var(--navy);overflow-wrap:anywhere}
+.b-summary{margin:0;color:var(--ink-2);font-size:1.02rem;overflow-wrap:anywhere}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:.9rem 0 0}
+.tag{font-size:.76rem;color:var(--muted);border:1px solid var(--line);border-radius:2px;padding:.08rem .5rem;overflow-wrap:anywhere}
+.badge{display:inline-block;font-size:.7rem;font-weight:700;padding:.1rem .45rem;border-radius:2px;white-space:nowrap;border:1px solid currentColor;line-height:1.5}
+.badge.high{color:var(--high)}.badge.medium{color:var(--medium)}.badge.low{color:var(--low)}
+.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:1rem;margin:2rem 0}
+.kpi{border:1px solid var(--line);padding:.8rem 1rem}
+.kpi b{display:block;font-size:1.6rem;font-weight:800;color:var(--navy)}
+.kpi span{color:var(--muted);font-size:.76rem;font-weight:600}
+.panel{border:1px solid var(--line);padding:1.25rem 1.4rem;margin-bottom:1.25rem}
+.panel h2{margin:0 0 .7rem;font-size:1rem;font-weight:750;color:var(--navy)}
+.viz-legend{display:flex;gap:.9rem;margin:0 0 .6rem}
+.lg-item{display:inline-flex;align-items:center;gap:.35rem;color:var(--muted);font-size:.78rem}
+.lg-swatch{width:12px;height:12px;border-radius:2px;display:inline-block}
 .viz-svg{width:100%;height:auto;display:block}
-.viz-cat{fill:var(--text);font-size:12px}.viz-val{fill:var(--text);font-size:12px;font-weight:600}
+.viz-cat{fill:var(--ink);font-size:12px}.viz-val{fill:var(--navy);font-size:12px;font-weight:700}
 table{width:100%;border-collapse:collapse;font-size:.88rem}
-th,td{border:1px solid var(--border);padding:.4rem .6rem;text-align:center}
-th{background:var(--surface-2);color:var(--text-dim);font-weight:600}
+th,td{border:1px solid var(--line);padding:.45rem .65rem;text-align:center}
+th{background:var(--bg-alt);color:var(--navy);font-weight:700}
 td.name{text-align:left;font-weight:600}
 td.num{font-variant-numeric:tabular-nums}
-.grp{margin-top:1.3rem}
-.grp h3{display:flex;align-items:center;gap:.5rem;margin:0 0 .6rem;font-size:1.02rem}
-.grp-count{font-size:.72rem;font-weight:600;color:var(--text-dim);background:var(--surface-2);border:1px solid var(--border);border-radius:999px;padding:.05rem .5rem}
-.item{background:var(--surface-2);border:1px solid var(--border);border-left-width:3px;border-radius:8px;padding:.8rem .9rem;margin-bottom:.7rem}
+.grp{margin-top:2.25rem}
+.grp h3{display:flex;align-items:center;gap:.5rem;margin:0 0 .2rem;font-size:1.05rem;font-weight:750;color:var(--navy)}
+.grp-count{font-size:.72rem;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:2px;padding:.02rem .45rem}
+.item{border-top:1px solid var(--line);border-left:2px solid var(--line);padding:1.1rem .1rem 1.1rem 1.1rem}
 .item.high{border-left-color:var(--high)}.item.medium{border-left-color:var(--medium)}.item.low{border-left-color:var(--low)}
-.item-head{display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem;flex-wrap:wrap}
-.item-meta{color:var(--text-dim);font-size:.8rem}
-.item-title{margin:0 0 .25rem;font-weight:600}
-.item-point{margin:0 0 .35rem;color:var(--text-dim);font-size:.92rem}
-.item-src{font-size:.82rem;word-break:break-all}
-footer{color:var(--text-dim);font-size:.8rem;text-align:center;padding:2rem 1rem 3rem}
+.item-title{margin:0 0 .3rem;font-size:1.06rem;font-weight:750;line-height:1.4;overflow-wrap:anywhere}
+.item-title a{color:var(--navy);text-decoration:none}
+.item-title a:hover{color:var(--blue);text-decoration:underline}
+.item-meta{display:flex;align-items:center;gap:.55rem;flex-wrap:wrap;font-size:.82rem;color:var(--muted)}
+.item-meta .src{color:var(--blue);font-weight:700;text-decoration:none}
+.item-meta .src:hover{text-decoration:underline}
+.item-meta time{font-variant-numeric:tabular-nums;color:var(--ink-2)}
+.item-point{margin:.45rem 0 0;color:var(--muted);font-size:.92rem;overflow-wrap:anywhere}
+footer{max-width:900px;margin:0 auto;color:var(--faint);font-size:.8rem;padding:1.5rem 2rem 3rem;border-top:1px solid var(--line)}
+footer a{color:var(--blue)}
 </style>
 </head>
 <body>
@@ -58,23 +61,21 @@ footer{color:var(--text-dim);font-size:.8rem;text-align:center;padding:2rem 1rem
   <p class="b-summary">Globex가 AI 플랫폼 팀 확장을 위해 시니어 채용 공고를 다수 게시. 신제품 준비 신호로 해석됨.</p>
   <div class="tags"><span class="tag">Globex</span><span class="tag">신규 채용</span><span class="tag">제품 로드맵</span></div>
   <div class="kpi-row"><div class="kpi"><b>2</b><span>항목</span></div><div class="kpi"><b>0</b><span>상</span></div><div class="kpi"><b>2</b><span>중</span></div><div class="kpi"><b>0</b><span>하</span></div><div class="kpi"><b>1</b><span>경쟁사</span></div><div class="kpi"><b>1</b><span>출처</span></div></div>
-  <div class="panel"><h2>경쟁사별 항목</h2><div class="viz-legend"><span class="lg-item"><span class="lg-swatch" style="background:#ef4444"></span>상</span><span class="lg-item"><span class="lg-swatch" style="background:#c98500"></span>중</span><span class="lg-item"><span class="lg-swatch" style="background:#8b93a1"></span>하</span></div><svg class="viz-svg" viewBox="0 0 640 46" role="img" aria-label="경쟁사별 항목 수"><text class="viz-cat" x="100" y="27" text-anchor="end">Globex</text><path d="M110,14 H580 Q584,14 584,18 V28 Q584,32 580,32 H110 Z" fill="#c98500"/><text class="viz-val" x="592" y="27">2</text></svg></div>
+  <div class="panel"><h2>경쟁사별 항목</h2><div class="viz-legend"><span class="lg-item"><span class="lg-swatch" style="background:#c00000"></span>상</span><span class="lg-item"><span class="lg-swatch" style="background:#2e75b6"></span>중</span><span class="lg-item"><span class="lg-swatch" style="background:#8792a2"></span>하</span></div><svg class="viz-svg" viewBox="0 0 640 46" role="img" aria-label="경쟁사별 항목 수"><text class="viz-cat" x="100" y="27" text-anchor="end">Globex</text><path d="M110,14 H580 Q584,14 584,18 V28 Q584,32 580,32 H110 Z" fill="#2e75b6"/><text class="viz-val" x="592" y="27">2</text></svg></div>
   
-  <div class="grp"><h3>Globex <span class="grp-count">2</span></h3>
+  <section class="grp"><h3>Globex <span class="grp-count">2</span></h3>
       
-      <div class="item medium">
-        <div class="item-head"><span class="badge medium">중</span><span class="item-meta">신규 채용 · 2026-07-12</span></div>
-        <p class="item-title">Globex AI 플랫폼 팀 시니어 채용</p>
-        <p class="item-point">AI 플랫폼 팀 시니어 엔지니어 8명 채용 공고 게시.</p>
-        <a class="item-src" href="https://example.com/globex-jobs" target="_blank" rel="noopener">https://example.com/globex-jobs</a>
-      </div>
-      <div class="item medium">
-        <div class="item-head"><span class="badge medium">중</span><span class="item-meta">제품 로드맵 · 2026-07-12</span></div>
-        <p class="item-title">채용 JD 에 실시간 추론 서비스 언급</p>
-        <p class="item-point">채용 JD에 &#39;실시간 추론 서비스&#39; 언급 — 신제품 준비 신호.</p>
-        <a class="item-src" href="https://example.com/globex-jd" target="_blank" rel="noopener">https://example.com/globex-jd</a>
-      </div>
-    </div>
+  <article class="item medium">
+    <h4 class="item-title"><a href="https://example.com/globex-jobs" target="_blank" rel="noopener">Globex AI 플랫폼 팀 시니어 채용</a></h4>
+    <div class="item-meta"><a class="src" href="https://example.com/globex-jobs" target="_blank" rel="noopener">example.com</a><span aria-hidden="true">·</span><time>2026-07-12</time><span aria-hidden="true">·</span><span>신규 채용</span><span aria-hidden="true">·</span><span class="badge medium">중</span></div>
+    <p class="item-point">AI 플랫폼 팀 시니어 엔지니어 8명 채용 공고 게시.</p>
+  </article>
+  <article class="item medium">
+    <h4 class="item-title"><a href="https://example.com/globex-jd" target="_blank" rel="noopener">채용 JD 에 실시간 추론 서비스 언급</a></h4>
+    <div class="item-meta"><a class="src" href="https://example.com/globex-jd" target="_blank" rel="noopener">example.com</a><span aria-hidden="true">·</span><time>2026-07-12</time><span aria-hidden="true">·</span><span>제품 로드맵</span><span aria-hidden="true">·</span><span class="badge medium">중</span></div>
+    <p class="item-point">채용 JD에 &#39;실시간 추론 서비스&#39; 언급 — 신제품 준비 신호.</p>
+  </article>
+    </section>
 </div>
 <footer>생성 2026-07-12T08:05:00Z · <a href="https://gunine.github.io/briefing-archive/">공개 아카이브</a></footer>
 <script type="application/json" id="briefing-data">{"id":"2026-07-12","date":"2026-07-12","title":"Globex 시니어 엔지니어 대규모 채용","summary":"Globex가 AI 플랫폼 팀 확장을 위해 시니어 채용 공고를 다수 게시. 신제품 준비 신호로 해석됨.","importance":"medium","competitors":["Globex"],"keywords":["신규 채용","제품 로드맵"],"items":[{"competitor":"Globex","keyword":"신규 채용","title":"Globex AI 플랫폼 팀 시니어 채용","point":"AI 플랫폼 팀 시니어 엔지니어 8명 채용 공고 게시.","source":"https://example.com/globex-jobs","date":"2026-07-12","importance":"medium"},{"competitor":"Globex","keyword":"제품 로드맵","title":"채용 JD 에 실시간 추론 서비스 언급","point":"채용 JD에 '실시간 추론 서비스' 언급 — 신제품 준비 신호.","source":"https://example.com/globex-jd","date":"2026-07-12","importance":"medium"}],"createdAt":"2026-07-12T08:05:00Z"}</script>
