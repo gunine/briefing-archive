@@ -106,6 +106,7 @@ function bindTip(node, getTitleRows) {
 
 // ── 데이터 적재/스코프 ──
 let loadedKey = null; // 어떤 인덱스(id 목록) 기준으로 로드했는지 — 바뀌면 다시 로드
+let loadFailures = 0; // 이번 적재에서 불러오지 못한 브리핑 수 (사용자에게 알린다)
 async function ensureDashData() {
   const ids = allBriefings.map((b) => b.id);
   const key = ids.join(",");
@@ -117,6 +118,7 @@ async function ensureDashData() {
     } catch { return null; }
   }));
   const ok = loaded.filter(Boolean);
+  loadFailures = ids.length - ok.length;
   briefingsFull = ok.sort((a, b) => a.date.localeCompare(b.date));
   loadedKey = key;
   // 일부 fetch 실패 시 캐시를 확정하지 않아 다음 렌더에서 재시도된다
@@ -500,8 +502,16 @@ function renderDashboard() {
   dashEl.textContent = "";
   const { briefs, items } = scoped();
   if (!briefs.length) {
-    dashEl.appendChild(h("p", "dash-empty", "표시할 브리핑이 없습니다."));
+    // 데이터가 있는데 전부 못 불러온 경우(file://, 네트워크 오류)와 진짜 빈 아카이브를 구분한다
+    dashEl.appendChild(h("p", "dash-empty",
+      allBriefings.length && loadFailures >= allBriefings.length
+        ? "브리핑 데이터를 불러오지 못했습니다. 대시보드는 서버 또는 공개 URL에서 열어야 동작합니다 (file:// 에서는 카드·브리핑 페이지만 지원)."
+        : "표시할 브리핑이 없습니다."));
     return;
+  }
+  if (loadFailures > 0) {
+    dashEl.appendChild(h("p", "dash-warn",
+      `⚠ 브리핑 ${loadFailures}건을 불러오지 못해 아래 수치가 실제보다 적을 수 있습니다.`));
   }
   renderKpis(dashEl, briefs, items);
   const grid = h("div", "dash-grid");

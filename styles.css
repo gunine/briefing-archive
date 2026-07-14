@@ -86,6 +86,9 @@ body {
 .card:hover { transform: translateY(-2px); border-color: var(--accent); }
 a.card { text-decoration: none; color: inherit; } /* 카드는 이제 브리핑 페이지로 가는 링크 */
 .card-stats { margin: 0; color: var(--text-dim); font-size: .78rem; font-variant-numeric: tabular-nums; }
+/* 공백 없는 긴 토큰(URL·긴 이름)이 카드/본문 레이아웃을 뚫지 않도록 */
+.card-title, .card-summary, .chip, .hl-text, .focus-desc, .detail-title, .detail-summary, .item-title, .item-point { overflow-wrap: anywhere; }
+.dash-warn { color: var(--medium); background: #3a2c12; border: 1px solid var(--border); border-radius: 8px; padding: .5rem .8rem; font-size: .82rem; margin: 0; }
 .card-top { display: flex; justify-content: space-between; align-items: center; gap: .5rem; }
 .card-date { color: var(--text-dim); font-size: .8rem; }
 .card-title { margin: 0; font-size: 1.05rem; font-weight: 600; }
